@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  display: inline-block
+}
+
+.container {
+  padding: 2px 16px;
+}
+#button {
+    font-size: 8pt;
+    margin-top: 20px;
+    margin-right: 20px;
+    position:absolute;
+    top:0;
+    right:0;
+ } 
+}
+</style>
+<input id="button" type="button" value="admin">
+<h1> Evenements : </h1> trier par : <form><select name="pets" id="pet-select">
+    <option value="">--Choisir le filtre--</option>
+    <option value="Concours">Concours</option>
+    <option value="Reunion">Reunion</option>
+    <option value="dedicace">dedicace</option>
+</select></form>
+    {% for var in variable %}
+        <div class ="card">
+            <h4>{{var.titre}}</h4>
+            <p>Description : {{var.description}}</p>
+            <p>Date : {{var.dateEvent|date("m/d/Y", "Europe/Paris")}}</p>
+            <p>Type : {{var.type}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

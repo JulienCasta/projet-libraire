@@ -33,6 +33,11 @@ class Event
     private $image;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $titre;
+
+    /**
      * @ORM\Column(type="text")
      */
     private $description;
@@ -86,6 +91,18 @@ class Event
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getTitre(): ?string
+    {
+        return $this->titre;
+    }
+
+    public function setTitre(string $titre): self
+    {
+        $this->titre = $titre;
 
         return $this;
     }
