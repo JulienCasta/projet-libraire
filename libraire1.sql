@@ -87,21 +87,6 @@ INSERT INTO `event` (`id`, `image`, `description`, `date_event`, `type`, `titre`
 (9, NULL, 'Ce lundi aura lieu la première édition du concours de lecture, la personne ayant le plus convaincu à la suite d\'un débat remportera le livre de son choix !', '2021-03-07', 'Concours', 'Concours de lecture Vol.1'),
 (10, NULL, 'Pour cette seconde édition du concours de lecture nous mettrons à l\'honneur le célèbre écrivain Guillaume Musso qui sera présent afin d\'être le juge pour le débat. \r\n\r\nles gagnants pourront alors repartir avec un livre dédicacé par l\'écrivain ! ', '2021-03-14', 'Concours', 'Concours de lecture Vol.2');
 
--- --------------------------------------------------------
-
---
--- Structure de la table `visitor`
---
-
-DROP TABLE IF EXISTS `visitor`;
-CREATE TABLE IF NOT EXISTS `visitor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lastname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
